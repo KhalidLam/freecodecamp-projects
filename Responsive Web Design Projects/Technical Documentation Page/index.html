@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Start Navbar -->
+
+    <nav id="navbar" class="navbar fl-left">
+        <header>JS Tutorial</header>
+
+        <ul>
+            <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+            <li><a href="#Statements" class="nav-link">Statements</a></li>
+            <li><a href="#Comments" class="nav-link">Comments</a></li>
+            <li><a href="#Variables" class="nav-link">Variables</a></li>
+            <li><a href="#Operators" class="nav-link">Operators</a></li>
+            <li><a href="#DataTypes" class="nav-link">DataTypes</a></li>
+            <li><a href="#Loops" class="nav-link">Loops</a></li>
+            <li><a href="#Functions" class="nav-link">Functions</a></li>
+            <li><a href="#Reference" class="nav-link">Reference</a></li>
+        </ul>
+    </nav>
+
+    <!-- End Navbar -->
+    <!-- Start Main -->
+
+    <main id="main-doc" class="main-doc"> 
+        <!-- Intro  -->
+        <section class="main-section" id="Introduction">
+            <header class="header-font">Introduction</header>
+            <article class="article-font">
+                <p> JavaScript is the programming language of HTML and the Web;also it is easy to learn.
+                    <br>Why Study JavaScript? JavaScript is one of the 3 languages all web developers must learn:
+                </p>
+                <ol class="article-list">
+                    <li>HTML to define the content of web pages</li>
+                    <li>CSS to specify the layout of web pages</li>
+                    <li>JavaScript to program the behavior of web pages</li>
+                </ol>
+                <p>Web pages are not the only place where JavaScript is used. Many desktop and server programs use
+                    JavaScript. Node.js is the best known. Some databases, like MongoDB and CouchDB, also use JavaScript
+                    as their programming language.</p>
+
+                <h4>JavaScript Can Change HTML Content</h4>
+                <p>
+                    One of many JavaScript HTML methods is <strong>getElementById()</strong> .<br>
+                    This example uses the method to "find" an HTML element (with id="demo") and changes the element
+                    content (<strong>innerHTML</strong>) to "Hello JavaScript":
+                </p>
+                <code class="article-code">
+                    document.getElementById("demo").innerHTML = "Hello JavaScript";
+                </code>
+                <p>Javascript accepts both double and single quotes:</p>
+                <code class="article-code">
+                    document.getElementById("demo").innerHTML = 'Hello JavaScript';
+                </code>
+
+                <h4>JavaScript Can Change HTML Styles (CSS)</h4>
+                <p>Changing the style of an HTML element, is a variant of changing an HTML attribute:</p>
+                <code class="article-code">
+                    document.getElementById("demo").style.fontSize = "35px";<br>or<br>
+                    document.getElementById('demo').style.fontSize = '35px';
+                </code>
+
+                <h4>JavaScript Can Hide HTML Elements</h4>
+                <p>Hiding HTML elements can be done by changing the display style:</p>
+                <code class="article-code">
+                    document.getElementById("demo").style.display = "none";<br>or<br>
+                    document.getElementById('demo').style.display = 'none';
+                 </code>
+                <p>In HTML, JavaScript code must be inserted between tags.</p>
+
+                <h4>Example</h4>
+                <code class="article-code">
+                    &LT;script&GT;
+                        <br>&numsp; document.getElementById("demo").innerHTML = "My First JavaScript";<br>
+                    &LT;/script&GT;
+                 </code>
+
+                <p>JavaScript can "display" data in different ways:</p>
+                <ul class="article-list">
+                    <li>Writing into an HTML element, using <strong>innerHTML.</strong></li>
+                    <li>Writing into the HTML output using <strong>document.write().</strong></li>
+                    <li>Writing into an alert box, using <strong>window.alert().</strong></li>
+                    <li>Writing into the browser console, using <strong>console.log().</strong></li>
+                </ul>
+
+            </article>
+        </section>
+
+        <!-- Statement -->
+        <section class="main-section" id="Statements">
+            <header class="header-font">Statements</header>
+            <article class="article-font">
+                <h4>Example</h4>
+                <code class="article-code">
+                        var x, y, z; // Statement 1<br>
+                        x = 5; // Statement 2<br>
+                        y = 6; // Statement 3<br>
+                        z = x + y; // Statement
+                    </code>
+
+                <h4>JavaScript Programs</h4>
+                <p>A computer program is a list of "instructions" to be "executed" by a computer. In a programming
+                    language, these programming instructions are called statements. A JavaScript program is a list of
+                    programming statements.In HTML, JavaScript programs are executed by the web browser.</p>
+
+                <h4>JavaScript Statements</h4>
+                <p>JavaScript statements are composed of:<br>Values, Operators, Expressions, Keywords, and Comments.</p>
+                <p>This statement tells the browser to write "Hello Dolly." inside an HTML element with id="demo":</p>
+                <code class="article-code">
+                        document.getElementById("demo").innerHTML = "Hello Dolly.";
+                    </code>
+                <p>Most JavaScript programs contain many JavaScript statements.<br>The statements are executed, one by
+                    one, in the same order as they are written.</p>
+
+                <h4>Semicolons ;</h4>
+                <p>Semicolons separate JavaScript statements.<br>Add a semicolon at the end of each executable
+                    statement:</p>
+                <code class="article-code">
+                        var a, b, c; // Declare 3 variables a = 5; // Assign the value 5 to a b = 6; // Assign the value 6 to b c = a + b; // Assign the sum of a and b to c
+                    </code>
+                <p>When separated by semicolons, multiple statements on one line are allowed:</p>
+                <code class="article-code">
+                        a = 5; b = 6; c = a + b;
+                    </code>
+
+                <h4>JavaScript Keywords</h4>
+                <p>JavaScript statements often start with a keyword to identify the JavaScript action to be
+                    performed.<br>Here is a list of some of the <a
+                        href="https://www.w3schools.com/js/js_reserved.asp">keywords</a> you will learn about in this
+                    tutorial.</p>
+
+            </article>
+        </section>
+
+        <!-- Comments -->
+        <section class="main-section" id="Comments">
+            <header class="header-font">Comments</header>
+            <article class="article-font">
+
+                <p>JavaScript comments can be used to explain JavaScript code, and to make it more
+                    readable.<br>JavaScript comments can also be used to prevent execution, when testing alternative
+                    code.</p>
+
+                <h4>Single Line Comments</h4>
+                <p>Single line comments start with //.<br>Any text between // and the end of the line will be ignored by
+                    JavaScript (will not be executed).<br>This example uses a single-line comment before each code line:
+                </p>
+                <code class="article-code">
+                        // Change heading: document.getElementById("myH").innerHTML = "My First Page"; <br>
+                        // Change paragraph: document.getElementById("myP").innerHTML = "My first paragraph.";
+                    </code>
+                <p>This example uses a single line comment at the end of each line to explain the code:</p>
+                <code class="article-code">
+                    var x = 5; // Declare x, give it the value of 5 var y = x + 2; // Declare y, give it the value of x + 2
+                </code>
+
+                <h4>Multi-line Comments</h4>
+                <p>Multi-line comments start with /* and end with */.<br>Any text between /* and */ will be ignored by
+                    JavaScript.</p>
+                <code class="article-code">
+                    /* The code below will change the heading with id = "myH" and the paragraph with id = "myP" in my web page: */ document.getElementById("myH").innerHTML = "My First Page"; document.getElementById("myP").innerHTML = "My first paragraph.";
+                </code>
+
+            </article>
+        </section>
+
+        <!-- Variables -->
+        <section class="main-section" id="Variables">
+            <header class="header-font">Variables</header>
+            <article class="article-font">
+                <p>JavaScript variables are containers for storing data values.<br>In this example, x, y, and z, are
+                    variables:</p>
+                <code class="article-code">var x = 5; var y = 6; var z = x + y;</code>
+                <p>From the example above, you can expect:</p>
+                <ul class="article-list">
+                    <li>x stores the value 5
+                    <li>y stores the value 6
+                    <li>z stores the value 11
+                </ul>
+
+                <h4>Much Like Algebra</h4>
+                <p>In this example, price1, price2, and total, are variables:</p>
+                <code class="article-code">
+                        var price1 = 5; var price2 = 6; var total = price1 + price2;
+                    </code>
+
+                <h4>JavaScript Identifiers</h4>
+
+                <p>
+                    All JavaScript variables must be identified with unique names.<br>
+                    These unique names are called identifiers.<br>
+                    Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).<br>
+                    The general rules for constructing names for variables (unique identifiers) are:
+                </p>
+
+                <ul class="article-list">
+                    <li>Names can contain letters, digits, underscores, and dollar signs.
+                    <li>Names must begin with a letter
+                    <li>Names can also begin with $ and _ (but we will not use it in this tutorial)
+                    <li>Names are case sensitive (y and Y are different variables)
+                    <li>Reserved words (like JavaScript keywords) cannot be used as names
+                </ul>
+
+                <span class="italic-text">JavaScript identifiers are case-sensitive.</span>
+
+            </article>
+        </section>
+
+        <!-- Operators -->
+        <section class="main-section" id="Operators">
+            <header class="header-font">Operators</header>
+            <article class="article-font">
+                <p>Assign values to variables and add them together:</p>
+                <code class="article-code">
+                    var x = 5; // assign the value 5 to x var y = 2; // assign the value 2 to y var z = x + y; // assign the value 7 to z (x + y)
+                </code>
+                <p>The assignment operator (=) assigns a value to a variable.</p>
+
+                <h4>Assignment</h4>
+                <code class="article-code">var x = 10;</code>
+                <p>The addition operator (+) adds numbers:</p>
+                <code class="article-code">var x = 5; var y = 2; var z = x + y;</code>
+                <p>The multiplication operator (*) multiplies numbers.</p>
+                <code class="article-code">var x = 5; var y = 2; var z = x * y;</code>
+
+                <h4>JavaScript String Operators</h4>
+                <p>The + operator can also be used to add (concatenate) strings.</p>
+                <code class="article-code">
+                    txt1 = "John";<br>
+                    txt2 = "Doe";<br>
+                    txt3 = txt1 + " " + txt2;
+                </code>
+                
+                <p>The result of txt3 will be:</p>
+                <code class="article-code">
+                    John Doe
+                </code>
+                
+                <p>The += assignment operator can also be used to add (concatenate) strings:</p>
+                <code class="article-code">
+                    txt1 = "What a very ";
+                    txt1 += "nice day";
+                </code>
+
+                <p>The result of txt1 will be:</p>
+                <code class="article-code">What a very nice day</code>
+
+                <h4>Adding Strings and Numbers</h4>
+                <p>Adding two numbers, will return the sum, but adding a number and a string will return a string:</p>
+                <code class="article-code">
+                    x = 5 + 5; y = "5" + 5; z = "Hello" + 5;
+                </code>
+                <p>The result of x, y, and z will be:</p>
+                <code class="article-code">10 55 Hello5</code>
+
+            </article>
+        </section>
+
+        <!-- DataTypes -->
+        <section class="main-section" id="DataTypes">
+            <header class="header-font">DataTypes</header>
+            <article class="article-font">
+                <p>JavaScript variables can hold many data types: numbers, strings, objects and more:</p>
+                <code class="article-code">var length = 16; // Number var lastName = "Johnson"; // String var x = {firstName:"John", lastName:"Doe"}; // Object</code>
+                
+                <h4>The Concept of Data Types</h4>
+                <p>
+                    In programming, data types is an important concept.
+                    <br>To be able to operate on variables, it is important to know something about the type.
+                    <br>Without data types, a computer cannot safely solve this:
+                </p>
+                <code class="article-code">
+                    var x = 16 + "Volvo";
+                </code>
+
+                <p>Does it make any sense to add "Volvo" to sixteen? Will it produce an error or will it produce a result?<br>It will produce:</p>
+                <code class="article-code">16Volvo</code>
+                <span class="text-italic">When adding a number and a string, JavaScript will treat the number as a string.</span>
+                
+                <h4>JavaScript Booleans</h4>
+                <p>Booleans can only have two values: true or false.</p>
+                <code class="article-code">
+                    var x = 5; var y = 5; var z = 6; (x == y) // Returns true (x == z) // Returns false
+                </code>
+                <p>Booleans are often used in conditional testing.</p>
+
+                <h4>JavaScript Arrays</h4>
+                <p>
+                    JavaScript arrays are written with square brackets.
+                    <br>Array items are separated by commas.
+                    <br>The following code declares (creates) an array called cars, containing three items (car names):
+                </p>
+                <code class="article-code">
+                    var cars = ["Saab", "Volvo", "BMW"];
+                </code>
+                
+                <p>Array indexes are zero-based, which means the first item is [0], second is [1], and so on.</p>
+                
+                <h4>JavaScript Objects</h4>
+
+                <p>JavaScript objects are written with curly braces. Object properties are written as name:value pairs, separated by commas.</p>
+                <code class="article-code">
+                    var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+                </code>
+                <p>The object (person) in the example above has 4 properties: firstName, lastName, age, and eyeColor.</p>
+                <p>You can use the JavaScript typeof operator to find the type of a JavaScript variable.</p>
+
+
+            </article>
+        </section>
+
+        <!-- Loop For -->
+        <section class="main-section" id="Loops">
+            <header class="header-font">Loops</header>
+            <article class="article-font">
+                <p>Loops can execute a block of code a number of times.</p>
+               
+                <h4>JavaScript Loops</h4>
+                <p>
+                    Loops are handy, if you want to run the same code over and over again, each time with a different value.<br>Often this is the case when working with arrays:
+                </p>
+                <p>Instead of writing:</p>
+                <code class="article-code">
+                        text += cars[0] + "<br>"; text += cars[1] + "<br>"; text += cars[2] + "<br>"; text += cars[3] + "<br>"; text += cars[4] + "<br>"; text += cars[5] + "<br>";
+                </code>
+
+                <p>You can write:</p>
+
+                <code class="article-code">
+                    var i; for (i = 0; i < cars.length; i++) { text += cars[i] + "\n"; }
+                </code>
+
+                <h4>The For Loop</h4>
+                <p>The for loop has the following syntax:</p>
+                <code class="article-code">
+                    for (statement 1; statement 2; statement 3) { code block to be executed }
+                </code>
+                <code class="article-code">
+                    for (i = 0, len = cars.length, text = ""; i < len; i++) { text += cars[i] + "\n"; }
+                </code>
+                
+                <h4>The While Loop</h4>
+                <p>The while loop loops through a block of code as long as a specified condition is true.</p>
+                <code class="article-code">while (condition) { code block to be executed }</code>
+                <p>In the following example, the code in the loop will run, over and over again, as long as a variable (i) is less than 10:</p>
+                <code class="article-code">while (i < 10) { text += "The number is " + i; i++; }</code>
+
+            </article>
+
+        </section>
+         
+        <!-- Functions -->
+        <section class="main-section" id="Functions">
+            <header class="header-font">Functions</header>
+            <article class="article-font">
+                <p>A JavaScript function is a block of code designed to perform a particular task.<br>A JavaScript function is executed when "something" invokes it (calls it).</p>
+                <code class="article-code">
+                    function myFunction(p1, p2) { return p1 * p2; // The function returns the product of p1 and p2 }
+                </code>
+                
+                <h4>JavaScript Function Syntax</h4>
+                <p>
+                    A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
+                    Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+                    The parentheses may include parameter names separated by commas: (parameter1, parameter2, ...)
+                    The code to be executed, by the function, is placed inside curly brackets: {}
+                </p>
+                
+                <code class="article-code">
+                    function name(parameter1, parameter2, parameter3) { code to be executed }
+                </code>
+
+                <h4>Example</h4>
+                <p>Calculate the product of two numbers, and return the result:</p>
+                <code class="article-code">
+                    var x = myFunction(4, 3); // Function is called, return value will end up in x function myFunction(a, b) { return a * b; // Function returns the product of a and b }
+                </code>
+                <p>The result will be:</p>
+                <code class="article-code">12</code>
+            </article>
+
+        <!-- Reference -->
+        <section class="main-section" id="Reference">
+            <header class="header-font">Reference</header>
+            <article class="article-font">
+                 <p>All the above documentation is taken from <a href="https://www.w3schools.com/jS/default.asp">W3Schools</a> </p>
+            </article>
+
+    </main>
+
+
+    <!-- End Main -->
+
+
+</body>
+
+</html>

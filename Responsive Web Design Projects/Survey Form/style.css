@@ -1,0 +1,130 @@
+body {
+  background: #a9d7d1;
+  width: 80%;
+  margin: auto;
+  font-family: "Raleway", Helvetica, sans-serif;
+  text-align: center;
+}
+
+#formDiv {
+  background: #fafafa;
+  margin: 0 auto;
+  padding: 20px 10px 10px 10px;
+  width: 90%;
+  border-radius: 5px;
+}
+
+.newRow {
+  margin: auto;
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 5px 15px;
+  grid-template-areas:
+    "question answer"
+    "question answer"
+    "question answer"
+    "question answer"
+    "question answer"
+    "question answer"
+    "question answer"
+    "question answer"
+    "submit submit";
+}
+
+.question {
+  grid-area: question;
+  justify-self: right;
+  align-self: start;
+  text-align: right;
+  max-width: 75%;
+}
+
+.answer {
+  grid-area: answer;
+  justify-self: left;
+  align-self: center;
+}
+
+.input-field {
+  height: 25px;
+  padding: 5px;
+  width: 230px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+.alignCenter {
+  align-self: center;
+}
+
+.answer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.answer ul li {
+  padding-bottom: 5px;
+  text-align: left;
+}
+
+#dropdown,
+#like {
+  height: 30px;
+  padding: 5px;
+  width: 130px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+@media (max-width: 833px) {
+  .input-field {
+    width: 170px;
+  }
+  .question {
+    max-width: 82%;
+  }
+}
+
+@media (max-width: 630px) {
+  .input-field {
+    width: 120px;
+  }
+  .newRow {
+    grid-gap: 0;
+    grid-column-gap: 5px;
+  }
+}
+
+@media (max-width: 460px) {
+  .newRow {
+    display: block;
+    text-align: center;
+    margin: 15px auto;
+
+  }
+  .question {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  .answer ul li{
+      text-align: center;
+  }
+}
+
+#submit {
+  background: PaleTurquoise;
+  grid-area: submit;
+}
+
+#submit {
+  border-radius: 5px;
+  padding: 10px 25px;
+  margin: 15px;
+  font-size: 1.2rem;
+  color: white;
+  background: #66b1de;
+}

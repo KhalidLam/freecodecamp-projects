@@ -1,0 +1,200 @@
+:root {
+    --main-white: #f0f0f0;
+    --navbar-bg: #be3144;
+    --welcome-bg: #313335;
+    --projects-bg: #45567D;
+    --contact-bg: #303841;
+    --contact-p: #ccc8c8;
+    --social-hover: #7cb2ea;
+}
+
+html {
+    /* Set font size for easy rem calculations
+    * default document font size = 16px, 1rem = 16px, 100% = 16px
+    * (100% / 16px) * 10 = 62.5%, 1rem h = 10px, 62.5% = 10px
+    */
+    /* font-size: 62.5%; */
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--main-white);
+}
+
+h1, h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+ul {
+    list-style: none
+}
+
+a {
+    display: inline-block;
+    color: var(--main-white);;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--navbar-bg);
+}
+
+.nav-list {
+    display: flex;
+    margin-right: 1.5rem;
+}
+
+@media (max-width: 760px){
+    .navbar {
+        justify-content: center;
+    }
+
+    .nav-list {
+        margin: 0 1rem;
+    }
+}
+
+.nav-link {
+    font-size: 1.4rem;
+    padding: 1.5rem;
+}
+
+.nav-link:hover{
+    background-color: var(--projects-bg);
+}
+
+.welcome-section {
+    width: 100%;
+    min-height: 100vh; 
+    padding: 7rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--welcome-bg);
+    background-image: linear-gradient(45deg, black, transparent);
+}
+
+.welcomer-header {
+    font-size: 4rem;
+}
+
+.welcome-section > p {
+    color: var(--navbar-bg);
+    font-size: 2rem;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.projects-section {
+    min-height: 100vh; 
+    padding: 7rem 2rem 4rem;
+    text-align: center;
+    background-color: var(--projects-bg);
+    background-image: linear-gradient(130deg, var(--projects-bg), var(--contact-p));
+}
+
+.projects-header {
+    width: 60%;
+    margin: 0 auto 3rem auto;
+    font-size: 2.8rem;
+    border-bottom: 2px solid var(--main-white);
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.project-tile {
+    width: 32%;
+    height: 380px;
+    margin-bottom: 2rem;
+    background-color: var(--welcome-bg);
+}
+
+@media (max-width: 760px){
+    .project-tile {
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+}
+
+.project-img {
+    height: calc(100% - 6.5rem);
+    width: 100%;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    padding: 1.4rem 1.4rem;
+}
+
+.project-btn {
+    display: inline-block;
+    margin-top: 4rem;
+    padding: 10px 25px;
+    border: none;
+    color: var(--main-white);
+    font-size: 1.4em;
+    background: var(--contact-bg);
+}
+
+.project-btn:hover {
+    background-color: var(--navbar-bg);
+}
+
+.contact-section {
+    width: 100%;
+    min-height: 100vh; 
+    padding: 10rem 2rem 7rem;
+    text-align: center;
+    background-color: var(--contact-bg);
+}
+
+.contact-header {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-section > p {
+    font-size: 1.3rem; 
+    font-style: italic;
+    color: var(--contact-p);
+}
+
+.social-icons {
+    margin: 2rem auto 0;
+    padding: 20px;
+}
+    
+.social-icons a {
+    margin-right: 40px;
+}
+
+.social-icons a:last-of-type{ 
+    margin-right: 0;
+}
+.social-icons i:hover {
+    color: var(--social-hover);
+}
